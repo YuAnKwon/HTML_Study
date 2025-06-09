@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 폼</title>
+</head>
+<body>
+    <h1>회원가입</h1>
+
+    <form action="/signup" method="post" autocomplete="on">
+        <!--아이디-->
+        <label for="userid"> 아이디 </label><br> 
+        <input type="text" id="userid" name="userid" placeholder="아이디 입력" required minlength="4" maxlength="12" >
+        <br><br> 
+
+        <!--비밀번호-->
+        <label for="pw"> 비밀번호 </label><br> 
+        <input type="password" id="pw" name="pw" required minlength="8" placeholder="비밀번호 입력">
+        <br><br> 
+        
+        <label for="checkpw"> 비밀번호 확인:</label><br> 
+        <input type="password" id="checkpw" name="checkpw" placeholder="비밀번호 재입력">
+        <br><br> 
+
+        <!-- 생년월일: 오늘 이전 날짜만 선택 가능 -->
+        <label for="birth">생년월일:</label><br>
+        <input type="date" id="birth" name="birth" required minlength="8" max="2025-06-09">
+        <br><br>  
+        
+        <!-- 가입일: 오늘 날짜로 자동 입력, 수정 불가 -->
+        <label for="regdate">가입일:</label><br>
+        <input type="date" id="regdate" name="regdate" value="2025-06-09" readonly>
+        <br><br>  
+
+        <!-- 이메일 -->
+        <label for="email">이메일:</label><br>
+        <input type="email" id="email" name="email" placeholder="example@email.com">
+        <br><br>  
+
+        <!-- 성별: -->
+        <label>성별:</label><br>
+        <input type="radio" id="male" name="gender" value="남자">
+        <label for="male">남자</label>
+        <input type="radio" id="female" name="gender" value="여자">
+        <label for="female">여자</label>
+        <input type="radio" id="other" name="gender" value="기타">
+        <label for="other">기타</label>
+        <br><br>  
+
+        <!-- 휴대폰 번호 -->
+        <label for="phone">휴대폰 번호:</label><br>
+        <input type="text" id="phone" name="phone" placeholder="010-1234-5678">
+        <br><br> 
+
+        <!-- 국가 -->
+        <label for="country">국가:</label><br>
+        <select id="country" name="country">
+            <option value="" disabled selected hidden>--국가 선택--</option>
+            <option value="Korea">대한민국</option>
+            <option value="China">중국</option>
+            <option value="USA">미국</option>
+            <option value="Japan">일본</option>
+            <option value="ETC">기타</option>
+        </select>
+        <br><br> 
+
+        <!-- 관심사(복수 선택 가능) -->
+        <label>관심사(복수 선택 가능):</label><br>
+        <input type="checkbox" id="sport" name="interest" value="스포츠">
+        <label for="sport">스포츠</label>
+        <input type="checkbox" id="music" name="interest" value="음악">
+        <label for="music">음악</label>
+        <input type="checkbox" id="game" name="interest" value="게임">
+        <label for="game">게임</label>
+        <input type="checkbox" id="trip" name="interest" value="여행">
+        <label for="trip">여행</label>
+        <br><br>  
+
+        <!-- 자기소개 -->
+        <label for="intro">자기소개:</label><br>
+        <textarea id="intro" name="intro" rows="4" cols="40" placeholder="자유롭게 입력하세요"></textarea>
+        <br><br> 
+
+        <!-- 이용약관 -->
+        <input type="checkbox" id="agree" name="agree" value="agree">
+        <label for="agree">이용약관에 동의합니다.</label><br>
+        <br><br>
+
+        <button type="submit">회원가입</button>
+        <button type="reset">초기화</button>
+    </form>
+
+</body>
+</html>
