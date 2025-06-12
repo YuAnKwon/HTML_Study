@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var는 자바스크립트 초기 방식
+        var varNum = 1;
+        varNum = varNum + 10;
+        document.write("varNum = "+varNum+"<hr>");
+
+        // let은 같은 이름의 변수를 다시 만들수 없다.
+        let letNum = "hello";
+        letNum = letNum + varNum;
+        document.write("letNum ="+letNum+"<hr>");
+
+        // const는 상수
+        const PI = 3.14;
+        document.write("pi ="+PI);
+    </script>
+</body>
+</html>

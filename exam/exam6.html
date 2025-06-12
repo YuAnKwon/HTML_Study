@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: #eee;
+        }
+
+        #container{
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 5px grey;
+            max-width: 800px;
+        }
+
+        /*메뉴바*/
+        #menu{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 20px 30px;
+        }
+
+        /*버튼*/
+        #btn-box{
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px 0px;
+        }
+        #btn-box button{
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            background-color: #4caf50;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /*카드*/
+        #cards{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; 
+        }
+
+        .card{
+            border-radius: 5px;
+            border: 1px solid #eee;
+            padding: 15px;
+            box-shadow: 0px 0px 5px grey;
+            flex: 1 1 200px; 
+        }
+
+        #comments{
+            height: 150px;
+            padding: 10px 0px;
+        }
+
+        .comment{
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            margin: 10px 0px;
+        }
+
+        #bottom-box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            margin-top: 20px;
+            background-color: #e0f7fa;
+            border-radius: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <!--메뉴바-->
+        <div id="menu">
+            <div style="cursor: pointer;">홈</div>
+            <div style="cursor: pointer;">소개</div>
+            <div style="cursor: pointer;">서비스</div>
+            <div style="cursor: pointer;">연락처</div>
+        </div>
+
+        <div id="btn-box">
+            <button>저장</button>
+            <button>수정</button>
+            <button>삭제</button>
+        </div>
+
+        <!--카드-->
+        <div id="cards">
+            <div class="card">
+                <h3>카드 1</h3>
+                <p>카드 레이아웃 예제입니다.</p>
+            </div>
+            <div class="card">
+                <h3>카드 2</h3>
+                <p>카드 레이아웃 예제입니다.</p>
+            </div>
+            <div class="card">
+                <h3>카드 3</h3>
+                <p>카드 레이아웃 예제입니다.</p>
+            </div>
+        </div>
+
+        <!--댓글-->
+        <div id="comments">
+            <div class="comment"><b>사용자1</b> : 좋은 내용이네요!</div>
+            <div class="comment"><b>사용자2</b> : 감사합니다.</div>
+            <div class="comment"><b>사용자3</b> : 궁금한 점이 있습니다.</div>
+        </div>
+        <div id="bottom-box">
+            이 박스 내 컨텐츠는 중앙에 정렬됩니다.
+        </div>
+    </div>
+</body>
+</html>
