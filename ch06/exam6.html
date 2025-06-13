@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>1~5 중 하나의 숫자를 입력하세요!</h2>
+    <input type="text" id= "input">
+    <button onclick="randomNum()">확인</button>
+    <script>
+        function randomNum(){
+            const computerNum = Math.floor(Math.random() * 5 + 1); // 1~5 숫자 랜덤생성
+            const inputNum = parseInt(document.getElementById("input").value); // 입력받은 숫자
+            
+            if(inputNum >= 1 && inputNum<=5){
+                if(computerNum == inputNum){
+                    document.write(`정답! 컴퓨터 숫자도 ${computerNum} 이었습니다.~`);
+                } else{
+                    document.write(`틀렸어요 ! 컴퓨터 숫자는 ${computerNum} 이었습니다~`);
+                }
+            }
+            else{
+                alert("1부터 5 사이의 숫자만 입력해주세요.");
+            }
+        }
+    </script>
+</body>
+</html>

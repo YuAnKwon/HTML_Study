@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style_js.css">
+</head>
+<body>
+    음식 1개 당 1200원입니다. 얼마 내실래요?
+    <hr>
+    <input type="text" id="input">
+    <button onclick="randomFood()">order</button>
+    <script>
+        function randomFood(){
+            const money = parseInt(document.getElementById('input').value); // 지불한 금액
+            const fnum = Math.floor(money / 1200); // 받을 음식 개수
+            const change = money - fnum * 1200; // 거스름돈
+
+            if(money >=1200){
+                for (let i = 1; i <=fnum; i++) {
+                    food = Math.floor(Math.random() * 3 +1 ); // 1~3 랜덤수 생성
+                    document.write(i + "<img src = '../media/food"+ food + ".png'>");
+                }
+                document.write("<h3>합 "+ fnum * 1200 + ", 반환 : "+ change + "</h3>");
+            }
+            else{
+                alert("금액이 모자랍니다.");
+            }
+        }
+    </script>
+</body>
+</html>

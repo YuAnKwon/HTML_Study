@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="alter">Change Color</h1>
+    <button onclick="change('red')">red</button>
+    <button onclick="change('blue')">blue</button>
+    <button onclick="change('yellow')">yellow</button>
+    <button onclick="change('green')">green</button>
+
+    <script>
+        function change(colors){
+            const alter = document.getElementById("alter");
+            alter.style.color = colors;
+        }
+    </script>
+</body>
+</html>
