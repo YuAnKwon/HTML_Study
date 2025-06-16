@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style_js.css">
+</head>
+<body>
+    <h2 id="h2"> Change Colors</h2>
+    <hr>
+    <input type="text" id="input">
+    <br>
+    <button onclick="change()">Start</button>
+
+    <script>
+        function change(){
+            const inputColor = document.getElementById("input").value;
+            const h2 = document.getElementById("h2");
+            h2.style.color = inputColor;
+        }
+    </script>
+</body>
+</html>

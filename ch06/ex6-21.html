@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style_js.css">
+</head>
+<body>
+    <script>
+        x = "전역 var"; // var는 생략선언가능
+
+        function test(){
+            var x = "지역 var";
+            document.write("함수 안 x = " + x + "<hr>");
+        }
+        test();
+
+        document.write("함수 바깥 x = "+x+"<hr>");
+    </script>
+</body>
+</html>

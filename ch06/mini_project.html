@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style_js.css">
+</head>
+<body>
+    <script>
+        const user = parseInt(prompt("입력하세요"));
+        const com = Math.floor(Math.random()* 2);
+
+        document.write(user+"User <img src='../media/food" + user+".png'>");
+        document.write("<hr>");
+        document.write(com+"Com <img src='../media/food" + com+".png'>");
+        document.write("<hr>");
+
+        if(user == com){
+            document.write("비겼습니다!");
+        } 
+        else if(user > com){
+            document.write("User가 이겼습니다.");
+        } 
+        else{
+            document.write("Com이 이겼습니다.")
+        }
+        </script>
+</body>
+</html>
