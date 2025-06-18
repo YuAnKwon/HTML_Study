@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../ch06/style_js.css">
-    
 </head>
 <body>
     <script>
         const letters = "0123456789ABCDEF";
+        let color = "#";
+        let count = 1;
         let intervalID = setInterval(changeColor, 1000);
 
-        let count = 1;
-        let color = "";
         function changeColor(){
-            if(count >25){
+            if(++count >25){
                 clearInterval(intervalID);
             }
 
@@ -23,10 +22,7 @@
             for(let i=0; i<6; i++){
                 color += letters[Math.floor(Math.random() *16)];
             }
-            document.write(`<div style='background-color:#${color}'>#${color}</div>`);
-            count++;
-            color ="";
-        
+            document.write(`<div style='background-color:#${color}'>${color}</div>`);
         }
     </script>
 </body>

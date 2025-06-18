@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../ch06/style_js.css">
+</head>
+<body>
+    <textarea id="input" rows="5" cols="20"></textarea><br>
+    <input type="button" value="Get Text" onclick="getTextarea()"><hr>
+    <pre id="result"></pre>
+
+    <script>
+        function getTextarea(){
+            const st = document.getElementById("input").value;
+            document.getElementById("result").innerHTML = st.toUpperCase();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../ch06/style_js.css">
+</head>
+<body>
+    <p>키우고 싶은 동물은</p>
+    <select id="myOption">
+        <option value="dog">개</option>
+        <option value="cat">고양이</option>
+        <option value="duck">오리</option>
+        <option value="koala">코알라</option>
+    </select>
+    <button onclick="getSelect()">클릭</button>
+    <hr>
+    <p id="result"></p>
+
+    <script>
+        function getSelect(){
+            //const index = document.getElementById("myOption").selectedIndex; // 인덱스 출력
+            //st = document.getElementById("myOption").options[index].value;
+            const st = document.querySelector("#myOption option:checked").value;
+            document.getElementById("result").innerHTML = st;
+        }
+    </script>
+</body>
+</html>

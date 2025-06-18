@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../ch06/style_js.css">
+</head>
+<body style="text-align: center;">
+    <img id="image" src="../media/photo1.jpg"><br>
+    <button onclick="changeImage()">Change</button>
+    <script>
+        let toggle = 1;
+        function changeImage(){
+            if (++toggle % 2 ==0){
+                document.getElementById("image").src="../media/photo2.jpg";
+            } else{
+                document.getElementById("image").src="../media/photo1.jpg";
+            }
+        }
+    </script>
+</body>
+</html>

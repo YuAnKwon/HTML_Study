@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../ch06/style_js.css">
+</head>
+<body>
+
+    <p class="elm">p class="elm 1"</p>
+    <p class="elm">p class="elm 2"</p>
+    <p>p & No Class</p>
+    <p id="ide">p id = "ide"</p> <hr>
+    <script>
+        const dots = document.length(".elm");
+        for(let i =0; i<dots.length; i++){
+            document.write(`dots[${i}] = ${dots[i].innerHTML}<br>`);
+        }
+        document.write("<hr>");
+        const hash = document.querySelectorAll("#ide");
+        for(let i=0; i<hash.length; i++){
+            document.write(`hash[${i}] = ${hash[i].innerHTML}<br>`);
+        }
+    </script>
+</body>
+</html>

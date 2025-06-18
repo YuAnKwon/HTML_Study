@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../ch06/style_js.css">
+</head>
+<body>
+    <input type="checkbox" id="myCheckbox"> 다음단계 진행 확인 <br>
+    <button onclick="getCheckbox()">process</button>
+    <p id="result"></p>
+
+    <script>
+        function getCheckbox(){
+            if(document.getElementById("myCheckbox").checked == true){
+                document.getElementById("result").innerHTML = "작업을 진행하겠습니다.";
+            } else{
+                document.getElementById("result").innerHTML = "사용자의 요구로 중단";
+            }
+        }
+    </script>
+</body>
+</html>

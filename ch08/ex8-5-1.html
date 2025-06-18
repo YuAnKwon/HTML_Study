@@ -1,0 +1,32 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>textarea에서 값 읽기</title>
+  <link rel="stylesheet" href="../ch06/style_js.css">
+<body>
+  <input type="text" id="input"><br>
+  <input type="button" value="변환" onClick="getResult()"><hr>
+  <p id="result"></p>
+  <script>
+    class NumberObj {
+      constructor(num) {
+        this.num = num;
+      }
+      
+      calc() {
+        /*case1*/
+        this.num *= 100;
+        return this.num;
+        /*case2*/
+        // return this.num * 100;
+      }
+    }
+    function getResult() {
+      let st = parseInt(document.getElementById("input").value);
+      let numberObj = new NumberObj(st);
+      document.getElementById("result").innerHTML = numberObj.calc(); //return value
+      console.log(numberObj.num);
+    }
+  </script>
+</body>
+</html>

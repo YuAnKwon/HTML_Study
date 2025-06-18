@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../ch06/style_js.css">
+    <style>
+        #rotate{
+            font-size:  40px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="rotate">Programming</h1>
+    <button onclick="start()">시작</button>
+    <button onclick="pause()">중지</button>
+    <script>
+        const rotate = document.getElementById("rotate");
+        function rotateString(){
+            const text = rotate.textContent;
+            const lastChar = text[text.length -1];
+            const rotatedText = lastChar+ text.slice(0, text.length-1);
+            rotate.textContent = rotatedText;
+        };
+
+        let intervalId;
+        function start(){
+            intervalId = setInterval(rotateString, 500);
+        };
+
+        function pause(){
+            clearInterval(intervalId);
+        };
+        
+    </script>
+</body>
+</html>
