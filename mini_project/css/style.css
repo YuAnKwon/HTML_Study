@@ -1,0 +1,128 @@
+/* 전체 기본 스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  height: 100%;
+}
+
+/* header */
+header #container{
+  height: 150px; 
+  background-color: #333; 
+  color:white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  position:fixed;
+  width: 100%;
+}
+
+header .menuBar a{
+  margin: 30px;
+  font-size: 1.5em;
+  text-decoration-line : none;
+  color:white;
+}
+header .menuBar a:hover{
+  color: orange;
+}
+
+/*Main intro*/
+
+main{
+  padding-top: 150px;
+}
+
+.intro{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  padding: 30px;
+  background-color: white;
+}
+
+.intro img{
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  object-fit: cover;
+}
+
+@media screen and (max-width : 700px) {
+  main .intro {
+    flex-direction: column;
+  }
+
+  .recipes #container{
+    flex-direction: column;
+  }
+}
+
+/*Main recipes*/
+.recipes{
+  background-color: #f9f9f9;
+}
+.recipes h1{
+  text-align: center;
+  margin: 30px;
+}
+
+.recipes #container{
+  display: flex;
+  justify-content: center;
+  
+}
+
+.recipe{
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px grey;
+  margin: 0px 30px;
+  gap: 10px;
+  padding: 0px 20px;
+}
+.recipe p{
+  color: #666;
+}
+.recipe img{
+  display: block; 
+  margin: 10px auto;
+}
+
+
+/* main contact*/
+
+.contact{
+  text-align: center;
+  padding: 30px;
+}
+
+.contact p{
+  color: #666;
+}
+
+/*footer*/
+footer {
+  display: flex;
+  height: 60px;
+  background-color: #333;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.followImg{
+  position: absolute;
+  transition: transform 0.05s linear; 
+}

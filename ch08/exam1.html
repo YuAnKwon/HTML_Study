@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form id="myForm">
+            <input type="text" id="todoInput" placeholder="새 할일 입력">
+            <button type="submit" >추가</button>
+            <button type="reset">완료항목 정리</button>
+        </form>
+
+        <ul id="todoList" style="list-style: none;">
+        </ul>
+        
+    </div>
+    <p id="result"></p>
+
+    <script>
+        let form = document.getElementById("myForm");
+        
+        // 추가 버튼 누를 시
+        form.addEventListener("submit", function(event){
+            event.preventDefault(); // 새로고침 막기     
+            const input = document.getElementById("todoInput").value;
+            const ul = document.getElementById("todoList"); // ul
+            ul.innerHTML += 
+            `<li>
+                <label>
+                    <input type="checkbox">
+                    <span>${input}</span>
+                </label>
+            </li>`;
+
+            // 체크시 line-through
+            const checkboxes = document.querySelectorAll("[type='checkbox']");
+            
+            for(let i=0; i<checkboxes.length; i++){
+                let box = checkboxes[i];
+                box.addEventListener('change', function(e){
+                    const span = box.parentElement.querySelector("span");
+                    if(box.checked){
+                        span.style.textDecoration = "line-through";
+                    } else{
+                        span.style.textDecoration = "none";
+                    }
+                })
+            }
+        }); 
+
+        // 완료항목정리 버튼 누를시
+        form.addEventListener("reset", function(){
+            const ul = document.getElementById("todoList");
+            const lis = document.querySelectorAll("#todoList li");
+            for(let i=0; i<lis.length; i++){
+                const checkbox = lis[i].querySelector("input");
+                if(checkbox.checked){                 
+                    ul.removeChild(lis[i]);
+                }
+            }
+        });
+    
+
+    </script>
+
+</body>
+</html>

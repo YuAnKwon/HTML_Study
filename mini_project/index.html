@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>맛있는 레시피</title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <!-- 헤더 영역 -->
+    <header>
+      <div id="container">
+        <h1>맛있는 레시피</h1>
+        <div class="menuBar">
+          <a href="#intro">Intro</a>
+          <a href="#recipes">Recipes</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <h2>현재 시각 <span id="nowDate"></span></h2>
+      </div>
+    </header>
+
+    <!-- 메인 영역 -->
+    <main>
+      <!-- 소개 섹션 -->
+      <section class="intro" id="intro">
+        <img id="introImg" src="img/shin_chan.jpg" onclick="changeImg()">
+        <div>
+          <h1>안녕하세요!</h1>
+          <p>이곳은 다양한 요리 레시피를 공유하는 공간입니다. 누구나 쉽게 따라 할 수 있는 간단한 요리부터 특별한 날을 위한 메뉴까지 준비했습니다</p>
+        </div>
+      </section>
+
+      <!-- 레시피 섹션 -->
+      <section class="recipes" id="recipes">
+        <h1>추천 레시피</h1>
+        <div id="container">
+          <div class="recipe">
+            <h1>감자전</h1>
+            <p>재료: 감자 3개, 전분가루 2큰술, 소금 약간, 식용유</p>
+            <br><hr><br>
+            <p>
+              조리법:<br>
+              1. 감자를 강판에 갈아 물기를 살짝 제거합니다.<br>
+              2. 전분가루와 소금을 넣어 잘 섞어줍니다.<br>
+              3. 팬에 식용유를 두르고 감자 반죽을 한 숟가락씩 떠서 부칩니다.<br>
+              4. 앞뒤로 노릇하게 구워내면 완성!<br>
+              5. 기호에 따라 간장 양념장을 곁들여 드세요.<br>
+            </p>
+            <br>
+            <img src="img/potato_pancake.jpg">
+          </div>
+
+          <div class="recipe">
+            <h1>크림 파스타</h1>
+            <p>재료: 스파게티 면 200g, 생크림 1컵, 다진 마늘 1큰술, 양파 반개, 파마산 치즈, 소금, 후추</p>
+            <br><hr><br>
+            <p>
+              조리법:<br>
+              1. 스파게티 면을 소금물에 삶아 준비합니다.<br>
+              2. 팬에 다진 마늘과 양파를 넣고 볶습니다.<br>
+              3. 생크림을 넣고 약불에서 끓인 후 소금과 후추로 간을 합니다.<br>
+              4. 삶아 둔 면을 소스에 넣고 잘 섞어줍니다.<br>
+              5. 접시에 담고 파마산 치즈를 뿌려 완성!<br>
+            </p>
+            <br>
+            <img src="img/carbonara.jpg">
+          </div>
+
+          <div class="recipe">
+            <h1>초콜릿 케이크</h1>
+            <p>재료: 다크 초콜릿 200g, 버터 100g, 설탕 150g, 달걀 3개, 밀가루 100g, 코코아 파우더</p>
+            <br><hr><br>
+            <p>
+              조리법:<br>
+              1. 초콜릿과 버터를 중탕으로 녹입니다.<br>
+              2. 설탕과 달걀을 휘핑해 크림화한 뒤 초콜릿을 섞습니다.<br>
+              3. 밀가루와 코코아 파우더를 체에 쳐서 반죽에 넣고 잘 섞어줍니다.<br>
+              4. 180도로 예열된 오븐에서 25~30분간 구워냅니다.<br>
+              5. 완성된 케이크 위에 슈가 파우더를 뿌리거나 과일로 장식하세요.<br>
+            </p>
+            <br>
+            <img src="img/chocolate_cake.jpg">
+          </div>
+        </div>
+      </section>
+
+      <!-- 연락처 섹션 -->
+      <section class="contact" id="contact">
+        <h1 id="rotate">문의사항은 아래로 연락부탁드립니다! </h1>
+        <p>연락처: 010-1234-5678</p>
+      </section>
+
+      <!-- 푸터 영역 -->
+      <footer>
+        &copy 2025. 맛있는 레시피 All rights reserved.
+      </footer>
+    </main>
+
+
+    <!--마우스 따라다니는 이미지
+    <img src="img/cutlery.png" class="followImg">-->
+    
+    <script src="./js/script.js"></script>
+  </body>
+</html>
