@@ -3,13 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>맛있는 레시피</title>
+    <title>미니 프로젝트</title>
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
+    <!--마우스 따라다니는 이미지-->
+    <img src="img/cutlery.png" id="followMouse">
+
     <!-- 헤더 영역 -->
     <header>
-      <div id="container">
+      <div class="header-container">
         <h1>맛있는 레시피</h1>
         <div class="menuBar">
           <a href="#intro">Intro</a>
@@ -33,8 +36,8 @@
 
       <!-- 레시피 섹션 -->
       <section class="recipes" id="recipes">
-        <h1>추천 레시피</h1>
-        <div id="container">
+        <h1 style="font-size: 2em;">추천 레시피</h1>
+        <div class="recipes-container">
           <div class="recipe">
             <h1>감자전</h1>
             <p>재료: 감자 3개, 전분가루 2큰술, 소금 약간, 식용유</p>
@@ -87,7 +90,7 @@
 
       <!-- 연락처 섹션 -->
       <section class="contact" id="contact">
-        <h1 id="rotate">문의사항은 아래로 연락부탁드립니다! </h1>
+        <h2 id="rotate">문의사항은 아래로 연락부탁드립니다! </h2>
         <p>연락처: 010-1234-5678</p>
       </section>
 
@@ -98,9 +101,7 @@
     </main>
 
 
-    <!--마우스 따라다니는 이미지
-    <img src="img/cutlery.png" class="followImg">-->
-    
+
     <script src="./js/script.js"></script>
   </body>
 </html>

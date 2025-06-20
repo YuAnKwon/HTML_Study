@@ -1,4 +1,8 @@
 /* 전체 기본 스타일 */
+html {
+  scroll-padding-top: 150px; /* header 높이만큼 설정 */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,26 +17,36 @@ body {
 }
 
 /* header */
-header #container{
+.header-container{
   height: 150px; 
   background-color: #333; 
   color:white;
 
-  display: flex;
-  justify-content: space-between;
+  display: flex; 
+  justify-content: space-around;
   align-items: center;
-  padding: 40px;
+
   position:fixed;
   width: 100%;
+  padding: 40px;
 }
 
-header .menuBar a{
+.header-container h1{
+  white-space: nowrap;
+}
+
+.menuBar{
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.menuBar a{
   margin: 30px;
   font-size: 1.5em;
   text-decoration-line : none;
   color:white;
 }
-header .menuBar a:hover{
+.menuBar a:hover{
   color: orange;
 }
 
@@ -59,38 +73,35 @@ main{
   object-fit: cover;
 }
 
-@media screen and (max-width : 700px) {
-  main .intro {
-    flex-direction: column;
-  }
-
-  .recipes #container{
-    flex-direction: column;
-  }
-}
-
 /*Main recipes*/
 .recipes{
   background-color: #f9f9f9;
+  padding: 30px;
 }
+
 .recipes h1{
   text-align: center;
-  margin: 30px;
+  margin-bottom : 30px;
 }
 
-.recipes #container{
+.recipes-container{
   display: flex;
   justify-content: center;
-  
 }
 
+/*recipe*/
 .recipe{
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0px 0px 5px grey;
-  margin: 0px 30px;
+  box-shadow: 0px 0px 3px grey;
+  margin: 0px 30px 30px 10px;
   gap: 10px;
-  padding: 0px 20px;
+  padding: 20px;
+  padding-top: 0px;
+  width: 90%;
+}
+.recipe h1{
+  margin-top: 20px;
 }
 .recipe p{
   color: #666;
@@ -100,12 +111,12 @@ main{
   margin: 10px auto;
 }
 
-
-/* main contact*/
-
+/*Main contact*/
 .contact{
   text-align: center;
-  padding: 30px;
+  font-size: 1.3em;
+  padding: 40px;
+  color: #333;
 }
 
 .contact p{
@@ -122,7 +133,26 @@ footer {
   align-items: center;
 }
 
-.followImg{
-  position: absolute;
-  transition: transform 0.05s linear; 
+@media screen and (max-width : 900px) {
+  main .intro {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .recipes-container{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+
+#followMouse{
+  transition: transform 0.01s linear; 
+  position: fixed;
+  width: 40px;
+  z-index: 1;
+  pointer-events: none;
+  top: 0;
+  left: 0;
 }
